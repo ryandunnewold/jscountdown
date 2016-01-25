@@ -58,7 +58,11 @@
   display: block;
   margin: 8px 0;
   width: 100%;
+  outline: none;
   cursor: pointer;
+  &:focus {
+    background: darken($color, 8%);
+  }
   &:hover {
     background: darken($color, 8%);
   }
@@ -83,7 +87,7 @@ html, body {
   @include flex-center;
   font-family: 'Oswald';
   #container {
-    max-width: 400px;
+    max-width: 300px;
     width: 100%;
     #timer-wrapper {
       @include flex-center;
@@ -95,6 +99,7 @@ html, body {
           font-weight: 700;
           color: #222;
           outline: none;
+          min-height: 95px; // Firefox hack
           &:empty {
             &:before {
               content: '00';
@@ -114,10 +119,16 @@ html, body {
       }
     }
     #actions {
-      #button {
+      #play-button {
         @include button(rgb(51, 204, 153));
         font-size: 2rem;
         text-align: center;
+      }
+      #pause-button {
+        @include button(#e67e22);
+        font-size: 2rem;      
+        text-align: center;
+        display: none;
       }
     }
   }

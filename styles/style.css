@@ -26,7 +26,7 @@ html, body {
   align-items: center;
   font-family: 'Oswald'; }
   #wrapper #container {
-    max-width: 400px;
+    max-width: 300px;
     width: 100%; }
     #wrapper #container #timer-wrapper {
       display: -webkit-box;
@@ -51,7 +51,8 @@ html, body {
           font-size: 4rem;
           font-weight: 700;
           color: #222;
-          outline: none; }
+          outline: none;
+          min-height: 95px; }
           #wrapper #container #timer-wrapper .timer-segment .number:empty:before {
             content: '00'; }
           #wrapper #container #timer-wrapper .timer-segment .number:empty:focus:before {
@@ -60,7 +61,7 @@ html, body {
           font-weight: 400;
           text-transform: uppercase;
           color: #999; }
-    #wrapper #container #actions #button {
+    #wrapper #container #actions #play-button {
       background: #33cc99;
       box-sizing: border-box;
       color: #fff;
@@ -71,11 +72,34 @@ html, body {
       display: block;
       margin: 8px 0;
       width: 100%;
+      outline: none;
       cursor: pointer;
       font-size: 2rem;
       text-align: center; }
-      #wrapper #container #actions #button:hover {
+      #wrapper #container #actions #play-button:focus {
         background: #2bab81; }
+      #wrapper #container #actions #play-button:hover {
+        background: #2bab81; }
+    #wrapper #container #actions #pause-button {
+      background: #e67e22;
+      box-sizing: border-box;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: none;
+      display: block;
+      margin: 8px 0;
+      width: 100%;
+      outline: none;
+      cursor: pointer;
+      font-size: 2rem;
+      text-align: center;
+      display: none; }
+      #wrapper #container #actions #pause-button:focus {
+        background: #c96a17; }
+      #wrapper #container #actions #pause-button:hover {
+        background: #c96a17; }
   #wrapper #character-container {
     width: 50%;
     height: 100%;
